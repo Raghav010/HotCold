@@ -1,10 +1,6 @@
 // todo
 // store high score
 
-if(localStorage.getItem('high_score')==null)
-{
-    localStorage.setItem('high_score',0)
-}
 
 // generates a random number
 let tries=0
@@ -25,7 +21,10 @@ function displayHighScore()
     }
 }
 
-displayHighScore()
+if(localStorage.getItem('high_score') != null)
+{
+    displayHighScore()
+}
 
 function indicate(e)
 {
@@ -42,7 +41,7 @@ function indicate(e)
             document.getElementById('guess').style.animation='bubbleBlow 1.2s'
             document.getElementById('guess').style.boxShadow='0 0 50px white'
             document.body.style.backgroundColor='white'
-            if(tries < localStorage.getItem('high_score'))
+            if(localStorage.getItem('high_score')==null || tries < localStorage.getItem('high_score'))
             {
                 localStorage.setItem('high_score',tries)
             }
