@@ -1,0 +1,141 @@
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+body
+{
+    background-color: azure;
+    transition: background-color 1.3s;
+}
+
+.CenterContents
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#circleVerPoz
+{
+    height: 30vh;
+    width:100vw;
+    position:absolute;
+    top:35vh;
+}
+
+#textVerPoz
+{
+    height: 35vh;
+    width:100vw;
+    position:absolute;
+}
+
+/*.guessCircle
+{
+    background-color: white;
+    color: black;
+    height:20vh;
+    width:20vh;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}*/
+
+
+@keyframes
+bubbleBlow
+{
+    0% {background-color: white;
+        height:20vh;
+        width: 20vh;}
+    13% {background-color: aqua;
+        height:30vh;
+        width: 30vh;}
+    100% {background-color: white;
+        height:20vh;
+        width: 20vh;}
+}
+
+
+.inputBox
+{
+    box-shadow: 0 0 50px #ccc;
+    -webkit-box-shadow: 0 0 50px #ccc;
+    -moz-box-shadow:  0 0 50px #ccc;
+    background-color: white;
+    color: black;
+    height: 20vh;
+    width : 20vh;
+    border-radius: 50%;
+    border-style: none;
+    text-align: center;
+    font-size: 40px;
+    transition: box-shadow 1.2s;
+    font-family: 'Chivo Mono',monospace;
+}
+
+.inputBox:focus
+{
+    outline: none;
+}
+
+
+#imgpos
+{
+    position: absolute;
+    top: 2vh;
+    left: 1vw;
+}
+
+#imagestyle
+{
+    border-radius: 20px;
+    width:20vw;
+    height: 2vh;
+}
+
+#highScorePos
+{
+    position: absolute;
+    top: 2vh;
+    right: 2vw;
+}
+
+#highScoreText
+{
+    font-weight: bold;
+    font-size: medium;
+    color: blueviolet;
+    font-family: 'Chivo Mono',monospace;
+}
+
+#watermark
+{
+    position:absolute;
+    top:98vh;
+    font-family: 'Chivo Mono',monospace;
+    font-size: smaller;
+    color: white;
+    width: 100vw;
+}
