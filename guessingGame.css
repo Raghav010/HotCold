@@ -103,7 +103,7 @@ bubbleBlow
 
 #imgpos
 {
-    position: absolute;
+    position: fixed;
     top: 2vh;
     left: 1vw;
 }
@@ -115,14 +115,14 @@ bubbleBlow
     height: 2vh;
 }
 
-#highScorePos
+#scorePos
 {
-    position: absolute;
+    position: fixed;
     top: 2vh;
     right: 2vw;
 }
 
-#highScoreText
+.scoreText
 {
     font-weight: bold;
     font-size: medium;

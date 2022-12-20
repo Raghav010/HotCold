@@ -9,32 +9,56 @@ console.log(randomNumber)
 
 function displayHighScore()
 {
-    let text=document.createTextNode('High Score : '+localStorage.getItem('high_score'))
+    let hstext=document.createTextNode('High Score : '+localStorage.getItem('high_score'))
     let hsTextElem=document.getElementById('highScoreText')
     if(hsTextElem.firstChild == null)
     {
-        hsTextElem.appendChild(text)
+        hsTextElem.appendChild(hstext)
     }
     else
     {
-        hsTextElem.replaceChild(text,hsTextElem.firstChild)
+        hsTextElem.replaceChild(hstext,hsTextElem.firstChild)
     }
+
+}
+
+function displayCurScore()
+{
+    let cstext=document.createTextNode('Current Score : '+tries)
+    let csElem=document.getElementById('currentScoreText')
+    if(csElem.firstChild==null)
+    {
+        csElem.appendChild(cstext)
+    }
+    else
+    {
+        csElem.replaceChild(cstext,csElem.firstChild)
+    }
+    
 }
 
 if(localStorage.getItem('high_score') != null)
 {
     displayHighScore()
 }
+displayCurScore()
 
 function indicate(e)
 {
     if(e.key == 'Enter')
     {
-        tries++
-
+        
         let guessVal=document.getElementById('guess').value
+        if(guessVal==null || guessVal==0 || guessVal<1 || guessVal>100) // handling not number values
+        {
+            return
+        }
+
+        tries++
+        displayCurScore()
+
         let diff=Math.abs(guessVal-randomNumber)
-        console.log('hey you entered'+guessVal)
+        console.log('hey you entered'+guessVal,diff)
 
         if(diff==0)
         {
@@ -46,6 +70,7 @@ function indicate(e)
                 localStorage.setItem('high_score',tries)
             }
             displayHighScore()
+            document.getElementById('guess').disabled=true
         }
         else
         {
