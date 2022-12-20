@@ -104,15 +104,16 @@ bubbleBlow
 #imgpos
 {
     position: fixed;
-    top: 2vh;
+    top: 30vh;
     left: 1vw;
 }
 
 #imagestyle
 {
     border-radius: 20px;
-    width:20vw;
-    height: 2vh;
+    max-width: 15px;
+    width:2vw;
+    height: 40vh;
 }
 
 #scorePos
