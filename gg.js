@@ -71,6 +71,7 @@ function indicate(e)
             }
             displayHighScore()
             document.getElementById('guess').disabled=true
+           
         }
         else
         {
